@@ -1,32 +1,44 @@
 #include "main.h"
+
 /**
- * puts_half - function that prints half of a string, followed by a new line.
- * @str: declaration of n and paramters for the function
- * Return: Always 0.
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
  */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
+}
+
+/**
+ * puts_half - prints half of a string, followed by a new line
+ * @str: string to print
+ */
+
 void puts_half(char *str)
 {
-	int c, a;
-	char l;
+	int idx;
+	int len = _strlen(str);
 
-	for (c = 0; str[c] != 0; c++)
-	{
-	}
-	if (c % 2 == 0)
-	{
-		for ((a = c / 2); str[a] != 0; a++)
-		{
-			l = str[a];
-			_putchar(l);
-		}
-	}
+	/* find the index to start depending on even/odd amount of strlen */
+	if (len % 2 != 0)
+		idx = (len / 2) + 1;
 	else
-		        {
-				                for ((a = (c - 1) / 2); str[a] != 0; a++)
-							                {
-										                        l = str[a];
-													                        _putchar(l);
-																                }
-						        }
+		idx = (len / 2);
+
+	while (idx < len)
+	{
+		_putchar(*(str + idx));
+		idx++;
+	}
 	_putchar('\n');
 }
