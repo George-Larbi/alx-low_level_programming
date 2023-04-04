@@ -7,15 +7,18 @@
  * Return: 0
  */
 
+
 int main(void)
+
 {
-	char c;
+	int n = '0';
 
-	for (c = '0'; c <= '9'; c++)
+	while (n <= '9')
 	{
-		putchar(c);
+		putchar(n);
+		n++;
 	}
-
 	putchar('\n');
+
 	return (0);
 }
