@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all single digit numbers of base 10 starting from 0, followed by a new line
+ * main - prints all single digit numbers of base 10, followed by a new line
  * Description: using the main function
  * program prints "all single digit numbers of base 10, followed by a new line"
  * Return: 0
@@ -16,7 +16,7 @@ int main(void)
 	{
 		printf("%i", i);
 	}
-	
+
 	printf("\n");
 	return (0);
 }
