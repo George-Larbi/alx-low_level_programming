@@ -21,7 +21,7 @@ int is_prime_number(int n)
  * Return: 0
  */
 
-int helper_prime(int n, int i, int limit)
+int prime_checker(int n, int i, int limit)
 
 {
 	if ((n % i == 0 && i <= limit) || n < 0 || n == 1)
